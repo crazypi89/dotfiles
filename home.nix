@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, unstable-pkgs, ... }:
 
 {
   # Informations sur l'utilisateur et le répertoire personnel
@@ -13,6 +13,11 @@
     firefox
     htop
     # Ajoute tes logiciels ici
+    #
+    # Gimp avec plugins depuis la branche UNSTABLE
+    unstable-pkgs.gimp-with-plugins
+
+    
   ];
 
   # Gestion des fichiers de configuration (Dotfiles)
@@ -25,8 +30,8 @@
   programs.bash = {
     enable = true;
     shellAliases = {
-      ll = "ls -l";
-      update = "sudo nixos-rebuild switch --flake ~/dotfiles#flakecrazypi";
+      ll = "ls -la";
+      update = "sudo nixos-rebuild switch --flake ./dotfiles#flakecrazypi";
     };
   };
 
