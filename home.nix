@@ -14,6 +14,29 @@
     htop
     # Ajoute tes logiciels ici
     #
+    
+ ## cli
+    helix
+    inxi
+    fastfetch
+    #stacer????    
+
+
+    ## gui
+    vivaldi
+    libreoffice-fresh
+    onlyoffice-desktopeditors
+    vscodium    
+
+    gnome-tweaks
+
+    
+
+
+    #gnome extention
+    gnomeExtensions.dash-to-dock
+    gnomeExtensions.appindicator
+        #
     # Gimp avec plugins depuis la branche UNSTABLE
     unstable-pkgs.gimp-with-plugins
 

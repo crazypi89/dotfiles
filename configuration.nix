@@ -101,34 +101,9 @@
     isNormalUser = true;
     description = "crazypi";
     extraGroups = [ "networkmanager" "wheel" "scanner" "lp" ];
-    packages = with pkgs; [
-    #  thunderbird
-    ## cli
-    helix
-    inxi
-    #stacer????    
 
 
-    ## gui
-    vivaldi
-    libreoffice-fresh
-    onlyoffice-desktopeditors
-    gparted
-
-
-    gnome-tweaks
-
-    #drivers
-    # 
-    canon-cups-ufr2
-    gutenprint
-
-
-    #gnome extention
-    gnomeExtensions.dash-to-dock
-    gnomeExtensions.appindicator
-    
-    ];
+   
   };
 
   # Install firefox.
@@ -148,7 +123,15 @@
   #  wget
   gparted
   git
-  fastfetch
+  
+
+   
+
+    #drivers
+    # 
+    canon-cups-ufr2
+    gutenprint
+
   
   ];
 
