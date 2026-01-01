@@ -20,6 +20,24 @@
     
   ];
 
+
+
+  # --- Tes réglages Dash to Dock récupérés ---
+  dconf.settings = {
+    "org/gnome/shell/extensions/dash-to-dock" = {
+      background-opacity = 0.06;
+      custom-theme-shrink = true;
+      dash-max-icon-size = 31;
+      dock-position = "BOTTOM";
+      height-fraction = 0.90;
+      preferred-monitor = -2;
+      preferred-monitor-by-connector = "eDP-1";
+      transparency-mode = "FIXED";
+    };
+  };
+
+  
+
   # Gestion des fichiers de configuration (Dotfiles)
   home.file = {
     # Exemple : créer un fichier .bash_aliases
