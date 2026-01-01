@@ -49,7 +49,7 @@
     enable = true;
     shellAliases = {
       ll = "ls -la";
-      update = "sudo nixos-rebuild switch --flake ./dotfiles#flakecrazypi";
+      update = "sudo nixos-rebuild switch --flake /home/crazypi/dotfiles#flakecrazypi";
     };
   };
 
