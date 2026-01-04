@@ -62,6 +62,10 @@
   services.printing.enable = true;
 
 
+  # enable flatpak
+  services.flatpak.enable = true;
+
+
   # service avahi pour imprimante
   services.avahi = {
     enable = true;
