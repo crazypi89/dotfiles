@@ -71,16 +71,21 @@
     enable = true;
     nssmdns4 = true;
     openFirewall = true;
+  };
 
+  
   # activer scanner
 #  hardware.sane.enable = true;
 #  hardware.sane.extraBackends =  [pkgs.sane-airscan];
-
+   
   
-    
+  fonts.packages = with pkgs; [
+    corefonts    # Polices Arial, Times New Roman, etc.
+    vista-fonts   # Polices Calibri, Cambria
+  ];    
       
      
-  };
+ 
   
 
   # Enable sound with pipewire.
@@ -133,7 +138,9 @@
   libva-utils     # Pour l'accélération matérielle
   gst_all_1.gst-plugins-ugly # Plugins GStreamer "restricted"
   gst_all_1.gst-plugins-bad
-
+  unzip
+  unrar
+  p7zip
    
 
     #drivers
