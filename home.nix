@@ -36,6 +36,7 @@
     #gnome extention
     gnomeExtensions.dash-to-dock
     gnomeExtensions.appindicator
+    gnomeExtensions.system-monitor
         #
     # Gimp avec plugins depuis la branche UNSTABLE
     unstable-pkgs.gimp-with-plugins

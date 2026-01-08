@@ -75,7 +75,9 @@
   # activer scanner
 #  hardware.sane.enable = true;
 #  hardware.sane.extraBackends =  [pkgs.sane-airscan];
+
   
+    
       
      
   };
@@ -114,7 +116,7 @@
   programs.firefox.enable = true;
 
 
-  #programs.gparted.enable = true;
+  
   
 
   # Allow unfree packages
@@ -127,7 +129,10 @@
   #  wget
   gparted
   git
-  
+  ffmpeg          # La base pour presque tous les formats audio/vidéo
+  libva-utils     # Pour l'accélération matérielle
+  gst_all_1.gst-plugins-ugly # Plugins GStreamer "restricted"
+  gst_all_1.gst-plugins-bad
 
    
 
