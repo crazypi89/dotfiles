@@ -73,7 +73,9 @@
     enable = true;
     shellAliases = {
       ll = "ls -la";
-      update = "sudo nixos-rebuild switch --flake /home/crazypi/dotfiles#flakecrazypi";
+      updateuefi = "sudo nixos-rebuild switch --flake /home/crazypi/dotfiles#pc-uefi";
+      updatebios = "sudo nixos-rebuild switch --flake /home/crazypi/dotfiles#vm-bios";
+
     };
   };
 

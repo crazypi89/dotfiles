@@ -28,7 +28,7 @@
       # Définition de votre configuration système
       nixosConfigurations = {
       # Ta config pour le PC UEFI
-        pc-fixe = nixpkgs.lib.nixosSystem {
+        pc-uefi = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };
           modules = [
@@ -39,7 +39,7 @@
         };
 
         # Ta config pour la VM BIOS
-        vm-nixos = nixpkgs.lib.nixosSystem {
+        vm-bios = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };
           modules = [
@@ -75,6 +75,5 @@
 
           
         ];
-      };
     };
 }
