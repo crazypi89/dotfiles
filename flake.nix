@@ -26,8 +26,34 @@
     in
     {
       # Définition de votre configuration système
-      nixosConfigurations.flakecrazypi = nixpkgs.lib.nixosSystem {
-        inherit system;
+      nixosConfigurations = {
+      # Ta config pour le PC UEFI
+        pc-fixe = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./system.nix
+            ./hosts/pc-uefi/default.nix
+            home-manager.nixosModules.home-manager
+          ];
+        };
+
+        # Ta config pour la VM BIOS
+        vm-nixos = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./system.nix
+            ./hosts/vm-bios/default.nix
+            home-manager.nixosModules.home-manager
+          ];
+        };
+
+
+      };
+
+
+ 
         
         # Transmettre les entrées (inputs) aux modules pour pouvoir utiliser 'unstable'
         specialArgs = { inherit inputs unstable-pkgs; };
