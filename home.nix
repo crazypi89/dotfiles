@@ -29,6 +29,7 @@
     libreoffice-fresh
     onlyoffice-desktopeditors
     vscodium    
+    #audacity
 
     gnome-tweaks
 
@@ -40,9 +41,17 @@
     gnomeExtensions.appindicator
     gnomeExtensions.system-monitor
         #
+
+
+    ###################################
+    #### unstable     #################
+    ###################################
+
+
     # Gimp avec plugins depuis la branche UNSTABLE
     unstable-pkgs.gimp-with-plugins
-
+    #audacity
+    unstable-pkgs.audacity
     
   ];
 
