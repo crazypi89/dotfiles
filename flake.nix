@@ -34,7 +34,16 @@
           modules = [
             ./system.nix
             ./hosts/pc-uefi/default.nix
+             # Intégration de Home-Manager comme module NixOS
             home-manager.nixosModules.home-manager
+             {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+
+              # C'EST ICI : On transmet unstable-pkgs à home.nix
+              home-manager.extraSpecialArgs = { inherit unstable-pkgs; };
+              home-manager.users.crazypi = import ./home.nix; # On va créer ce fichier
+	     } 
           ];
         };
 
@@ -45,7 +54,16 @@
           modules = [
             ./system.nix
             ./hosts/vm-bios/default.nix
+             # Intégration de Home-Manager comme module NixOS
             home-manager.nixosModules.home-manager
+             {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+
+              # C'EST ICI : On transmet unstable-pkgs à home.nix
+              home-manager.extraSpecialArgs = { inherit unstable-pkgs; };
+              home-manager.users.crazypi = import ./home.nix; # On va créer ce fichier
+             } 
           ];
         };
 
@@ -60,7 +78,7 @@
         
         modules = [
           # On pointe vers votre fichier de configuration habituel
-          ./configuration.nix
+          #./configuration.nix
 
           # Intégration de Home-Manager comme module NixOS
            home-manager.nixosModules.home-manager
