@@ -88,6 +88,7 @@
       updatebios = "sudo nixos-rebuild switch --flake /home/crazypi/dotfiles#vm-bios";
       upgradeuefi = "cd ~/dotfiles && nix flake update && updateuefi";
       upgradebios = "cd ~/dotfiles && nix flake update && updatebios";
+      clean = "sudo nix-collect-garbage -d && nix-collect-garbage -d";
     };
   };
 
