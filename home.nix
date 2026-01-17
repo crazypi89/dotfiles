@@ -11,7 +11,7 @@
   # Paquets spécifiques à l'utilisateur (déplace-les ici depuis configuration.nix)
   home.packages = with pkgs; [
     firefox
-    htop
+    
     # Ajoute tes logiciels ici
     #
     
@@ -19,6 +19,8 @@
     helix
     inxi
     fastfetch
+    btop
+    htop
     #stacer????    
 
 
@@ -75,10 +77,12 @@
       ll = "ls -la";
       updateuefi = "sudo nixos-rebuild switch --flake /home/crazypi/dotfiles#pc-uefi";
       updatebios = "sudo nixos-rebuild switch --flake /home/crazypi/dotfiles#vm-bios";
-
+      upgradeuefi = "cd ~/dotfiles && nix flake update && updateuefi";
+      upgradebios = "cd ~/dotfiles && nix flake update && updatebios";
     };
   };
 
   # Laisse Home Manager gérer lui-même
   programs.home-manager.enable = true;
 }
+
