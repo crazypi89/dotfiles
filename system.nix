@@ -57,6 +57,12 @@
   # enable flatpak
   services.flatpak.enable = true;
 
+  # Activation du dépôt Flathub automatiquement
+  system.activationScripts.flatpak-repo = {
+    text = ''
+      ${pkgs.flatpak}/bin/flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+    '';
+  };
   
 
 
