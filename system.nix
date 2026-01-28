@@ -57,6 +57,9 @@
   # enable flatpak
   services.flatpak.enable = true;
 
+  
+
+
 
   # service avahi pour imprimante
   services.avahi = {
@@ -124,8 +127,10 @@
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
-  gparted
+  gparted 
   git
+  libsecret
+
   ffmpeg          # La base pour presque tous les formats audio/vidéo
   libva-utils     # Pour l'accélération matérielle
   gst_all_1.gst-plugins-ugly # Plugins GStreamer "restricted"
