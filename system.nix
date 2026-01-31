@@ -159,7 +159,7 @@
     epiphany         # Navigateur Web GNOME (Web)
     #geary            # Client Mail
     #gnome-characters # Table des caractères
-    #gnome-maps       # Cartes
+    gnome-maps       # Cartes
     gnome-weather    # Météo
     gnome-contacts   # Contacts
     #gnome-tour       # Le tutoriel de bienvenue
