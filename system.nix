@@ -154,6 +154,26 @@
   
   ];
 
+   environment.gnome.excludePackages = with pkgs; [
+    gnome-packagekit # Supprime PackageKit
+    epiphany         # Navigateur Web GNOME (Web)
+    #geary            # Client Mail
+    #gnome-characters # Table des caractères
+    #gnome-maps       # Cartes
+    gnome-weather    # Météo
+    gnome-contacts   # Contacts
+    #gnome-tour       # Le tutoriel de bienvenue
+    gnome-music      # Musique
+    gnome-photos     # Photos
+    totem            # Vidéos
+    tali             # Jeu
+    iagno            # Jeu
+    hitori           # Jeu
+    atomix           # Jeu
+  ];
+
+ 
+ 
   programs.git.enable = true;
 
 

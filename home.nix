@@ -28,8 +28,8 @@
     vivaldi
     libreoffice-fresh
     onlyoffice-desktopeditors
-    vscodium    
-    #audacity
+    vscodium  
+        #audacity
 
     gnome-tweaks
 
@@ -41,6 +41,9 @@
     gnomeExtensions.appindicator
     gnomeExtensions.system-monitor
         #
+
+   
+
 
 
     ###################################
