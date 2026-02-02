@@ -29,10 +29,16 @@
     libreoffice-fresh
     onlyoffice-desktopeditors
     vscodium  
+    inkscape-with-extensions
         #audacity
-
+    
     gnome-tweaks
-
+    #pour la programation rust 
+    rustc          # Le compilateur
+    cargo          # Le gestionnaire de paquets et de build
+    rust-analyzer  # INDISPENSABLE pour l'auto-complétion dans VSCodium/Helix
+    rustfmt        # Pour formater ton code automatiquement
+    clippy         # Le linter qui te donne des conseils de pro 
     
 
 
@@ -40,6 +46,8 @@
     gnomeExtensions.dash-to-dock
     gnomeExtensions.appindicator
     gnomeExtensions.system-monitor
+    gnomeExtensions.quick-lofi
+
         #
 
    

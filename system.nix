@@ -156,6 +156,7 @@
 
    environment.gnome.excludePackages = with pkgs; [
     gnome-packagekit # Supprime PackageKit
+    gnome-software
     epiphany         # Navigateur Web GNOME (Web)
     #geary            # Client Mail
     #gnome-characters # Table des caractères
