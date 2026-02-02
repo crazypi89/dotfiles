@@ -39,6 +39,8 @@
     rust-analyzer  # INDISPENSABLE pour l'auto-complétion dans VSCodium/Helix
     rustfmt        # Pour formater ton code automatiquement
     clippy         # Le linter qui te donne des conseils de pro 
+    # LE COMPILATEUR C (pour le linker)
+    gcc
     
 
 

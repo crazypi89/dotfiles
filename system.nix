@@ -158,12 +158,12 @@
     gnome-packagekit # Supprime PackageKit
     gnome-software
     epiphany         # Navigateur Web GNOME (Web)
-    #geary            # Client Mail
+    geary            # Client Mail
     #gnome-characters # Table des caractères
     gnome-maps       # Cartes
     gnome-weather    # Météo
     gnome-contacts   # Contacts
-    #gnome-tour       # Le tutoriel de bienvenue
+    gnome-tour       # Le tutoriel de bienvenue
     gnome-music      # Musique
     gnome-photos     # Photos
     totem            # Vidéos
