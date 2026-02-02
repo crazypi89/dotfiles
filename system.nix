@@ -176,8 +176,11 @@
  
  
   programs.git.enable = true;
-
-
+  # Dans system.nix
+  programs.appimage = {
+    enable = true;
+    binfmt = true;
+  };
 
 
 
