@@ -113,7 +113,11 @@
     isNormalUser = true;
     description = "crazypi";
     extraGroups = [ "networkmanager" "wheel" "scanner" "lp" ];
-
+  };
+  users.users.sandra = {
+    isNormalUser = true;
+    description = "sandra";
+    extraGroups = [ "networkmanager" "wheel" "scanner" "lp" ];
 
    
   };

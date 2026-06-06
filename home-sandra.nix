@@ -2,8 +2,8 @@
 
 {
   # Informations sur l'utilisateur et le répertoire personnel
-  home.username = "crazypi";
-  home.homeDirectory = "/home/crazypi";
+  home.username = "sandra";
+  home.homeDirectory = "/home/sandra";
 
   # État de la version de Home Manager (à ne pas changer après l'installation)
   home.stateVersion = "25.11"; 
@@ -19,7 +19,7 @@
     helix
     inxi
     fastfetch
-    btop
+    #btop
     htop
     #stacer????    
 
@@ -28,7 +28,7 @@
     vivaldi
     libreoffice-fresh
     onlyoffice-desktopeditors
-    vscodium  
+    #vscodium  
     jetbrains.clion
     inkscape-with-extensions
     zoom-us
@@ -36,11 +36,11 @@
     
     gnome-tweaks
     #pour la programation rust 
-    rustc          # Le compilateur
-    cargo          # Le gestionnaire de paquets et de build
-    rust-analyzer  # INDISPENSABLE pour l'auto-complétion dans VSCodium/Helix
-    rustfmt        # Pour formater ton code automatiquement
-    clippy         # Le linter qui te donne des conseils de pro 
+    #rustc          # Le compilateur
+    #cargo          # Le gestionnaire de paquets et de build
+    #rust-analyzer  # INDISPENSABLE pour l'auto-complétion dans VSCodium/Helix
+    #rustfmt        # Pour formater ton code automatiquement
+    #clippy         # Le linter qui te donne des conseils de pro 
     #rustup
     
     # LE COMPILATEUR C (pour le linker)
@@ -102,8 +102,8 @@
     enable = true;
     shellAliases = {
       ll = "ls -la";
-      updateuefi = "sudo nixos-rebuild switch --flake /home/crazypi/dotfiles#pc-uefi";
-      updatebios = "sudo nixos-rebuild switch --flake /home/crazypi/dotfiles#vm-bios";
+      #updateuefi = "sudo nixos-rebuild switch --flake /home/crazypi/dotfiles#pc-uefi";
+      #updatebios = "sudo nixos-rebuild switch --flake /home/crazypi/dotfiles#vm-bios";
       upgradeuefi = "cd ~/dotfiles && nix flake update && updateuefi";
       upgradebios = "cd ~/dotfiles && nix flake update && updatebios";
       clean = "sudo nix-collect-garbage -d && nix-collect-garbage -d";

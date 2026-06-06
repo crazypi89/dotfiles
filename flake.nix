@@ -42,7 +42,9 @@
 
               # C'EST ICI : On transmet unstable-pkgs à home.nix
               home-manager.extraSpecialArgs = { inherit unstable-pkgs; };
-              home-manager.users.crazypi = import ./home.nix; # On va créer ce fichier
+              home-manager.users.crazypi = import ./home.nix; # On va créer ce fichie
+              home-manager.users.sandra = import ./home-sandra.nix; # On va créer ce fichier
+
 	     } 
           ];
         };
@@ -63,6 +65,8 @@
               # C'EST ICI : On transmet unstable-pkgs à home.nix
               home-manager.extraSpecialArgs = { inherit unstable-pkgs; };
               home-manager.users.crazypi = import ./home.nix; # On va créer ce fichier
+              home-manager.users.sandra = import ./home-sandra.nix; # On va créer ce fichier
+
              } 
           ];
         };
@@ -72,26 +76,7 @@
 
 
  
-        
-        # Transmettre les entrées (inputs) aux modules pour pouvoir utiliser 'unstable'
-        specialArgs = { inherit inputs unstable-pkgs; };
-        
-        modules = [
-          # On pointe vers votre fichier de configuration habituel
-          #./configuration.nix
-
-          # Intégration de Home-Manager comme module NixOS
-           home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-
-            # C'EST ICI : On transmet unstable-pkgs à home.nix
-            home-manager.extraSpecialArgs = { inherit unstable-pkgs; };
-            home-manager.users.crazypi = import ./home.nix; # On va créer ce fichier
-          } 
-
           
-        ];
+        #];
     };
 }
