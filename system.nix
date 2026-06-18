@@ -60,7 +60,7 @@
   # Activation du dépôt Flathub automatiquement
   system.activationScripts.flatpak-repo = {
     text = ''
-      ${pkgs.flatpak}/bin/flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+      ${pkgs.flatpak}/bin/flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo  || true
     '';
   };
   
@@ -193,6 +193,8 @@
 # Dans system.nix
   nix = {
     settings.auto-optimise-store = true; # Supprime les fichiers en double
+    settings.download-buffer-size = 536870912; # 512 Mo en octets (512 * 1024 * 1024)t
+        
     gc = {
       automatic = true;
       dates = "weekly";
@@ -231,6 +233,19 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "25.11"; # Did you read the comment?  
+  system.autoUpgrade = {
+    enable = true;
+    allowReboot = true;
+    # Indique à NixOS d'utiliser votre configuration locale pc-uefi
+    flake = "/home/crazypi/dotfiles#pc-uefi";
+    # Met à jour automatiquement les pointeurs du flake.lock pour le système et home-manager
+    flags = [
+      "--update-input" "nixpkgs"
+      "--update-input" "home-manager"
+    ];
+  };
+  
+  
+  system.stateVersion = "26.05"; # Did you read the comment?  
 
 }

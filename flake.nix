@@ -2,15 +2,15 @@
   description = "Ma configuration NixOS Flake";
 
   inputs = {
-    # Entrée 1 : NixOS Stable (version 25.11)
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    # Entrée 1 : NixOS Stable (version 26.05)
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
 
     # Entrée 2 : NixOS Unstable (pour les paquets très récents)
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     # Ajout de Home-Manager
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.11";
+      url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     }; 
     
