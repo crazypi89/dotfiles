@@ -70,7 +70,27 @@
              } 
           ];
         };
+        # Ta config pour la VM uefi
+        vm-uefi = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./system.nix
+            ./hosts/vm-uefi/default.nix
+             # Intégration de Home-Manager comme module NixOS
+            home-manager.nixosModules.home-manager
+             {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
 
+              # C'EST ICI : On transmet unstable-pkgs à home.nix
+              home-manager.extraSpecialArgs = { inherit unstable-pkgs; };
+              home-manager.users.crazypi = import ./home.nix; # On va créer ce fichier
+              home-manager.users.sandra = import ./home-sandra.nix; # On va créer ce fichier
+
+             } 
+          ];
+        };
 
       };
 

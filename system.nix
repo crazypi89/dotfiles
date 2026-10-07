@@ -54,6 +54,18 @@
   services.printing.enable = true;
 
 
+  services.desktopManager.gnome.extraGSettingsOverridePackages = [
+    pkgs.nautilus-open-any-terminal
+  ];
+
+  environment.sessionVariables.NAUTILUS_4_EXTENSION_DIR = "${config.system.path}/lib/nautilus/extensions-4";
+
+  programs.nautilus-open-any-terminal = {
+    enable = true;
+    # Remplacez par le terminal que vous utilisez (ex: "kgx", "kitty", "alacritty"...)
+    terminal = "gnome-terminal"; 
+  };
+
   # enable flatpak
   services.flatpak.enable = true;
 
@@ -140,6 +152,11 @@
   gparted 
   git
   libsecret
+  # nautilus 
+  nautilus
+  nautilus-python          # Requis pour l'extension
+  nautilus-open-any-terminal
+  gnome-terminal
 
   ffmpeg          # La base pour presque tous les formats audio/vidéo
   libva-utils     # Pour l'accélération matérielle

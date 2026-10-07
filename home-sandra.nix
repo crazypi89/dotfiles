@@ -8,6 +8,29 @@
   # État de la version de Home Manager (à ne pas changer après l'installation)
   home.stateVersion = "25.11"; 
 
+
+  # Créer les dossiers standard
+  home.activation.createUserDirs = ''
+      mkdir -p "$HOME/Bureau" "$HOME/Téléchargements" "$HOME/Modèles" \
+               "$HOME/Public" "$HOME/Documents" "$HOME/Musique" \
+               "$HOME/Images" "$HOME/Vidéos"
+    '';
+  
+
+  # Configuration XDG
+  xdg.userDirs = {
+    enable = true;
+    createDirectories = true;
+    desktop = "$HOME/Bureau";
+    documents = "$HOME/Documents";
+    download = "$HOME/Téléchargements";
+    music = "$HOME/Musique";
+    pictures = "$HOME/Images";
+    publicShare = "$HOME/Public";
+    templates = "$HOME/Modèles";
+    videos = "$HOME/Vidéos";
+  };
+
   # Paquets spécifiques à l'utilisateur (déplace-les ici depuis configuration.nix)
   home.packages = with pkgs; [
     firefox
