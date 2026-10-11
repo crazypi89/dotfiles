@@ -111,11 +111,8 @@
       clean = "sudo nix-collect-garbage -d && nix-collect-garbage -d";
     };
   };
-  programs.nautilus-open-any-terminal = {
-    enable = true;
-    # Remplacez par le terminal que vous utilisez (ex: "kgx", "kitty", "alacritty"...)
-    terminal = "gnome-terminal"; 
-  };
+  
+  
   # Laisse Home Manager gérer lui-même
   programs.home-manager.enable = true;
 }
